@@ -33,4 +33,4 @@ jobs:
           version: v3.4.0
 
       - name: Install Postgresql
-        run: helm upgrade --install --namespace auxo -f values-staging.yaml postgresql postgresql/
+        run: helm upgrade --install --namespace auxo -f values-staging.yaml auxo-db postgresql/
