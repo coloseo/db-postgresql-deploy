@@ -7,7 +7,7 @@ on:
 
 jobs:
   apply:
-    name: Deploy auxo database
+    name: Deploy database
     runs-on: Ubuntu-20.04
     steps:
       - name: Checkout
@@ -33,4 +33,4 @@ jobs:
           version: v3.4.0
 
       - name: Install Postgresql
-        run: helm upgrade --install --namespace auxo -f values-staging.yaml auxo-db ./postgresql
+        run: helm upgrade --install --namespace db -f values-staging.yaml db ./postgresql

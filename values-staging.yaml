@@ -135,12 +135,12 @@ postgresqlPostgresPassword: coloseo123
 ## PostgreSQL user (has superuser privileges if username is `postgres`)
 ## ref: https://github.com/bitnami/bitnami-docker-postgresql/blob/master/README.md#setting-the-root-password-on-first-run
 ##
-postgresqlUsername: auxo
+postgresqlUsername: coloseo
 
 ## PostgreSQL password
 ## ref: https://github.com/bitnami/bitnami-docker-postgresql/blob/master/README.md#setting-the-root-password-on-first-run
 ##
-postgresqlPassword: auxo
+postgresqlPassword: coloseo123
 
 ## PostgreSQL password using existing secret
 ## existingSecret: secret
@@ -152,7 +152,7 @@ postgresqlPassword: auxo
 ## Create a database
 ## ref: https://github.com/bitnami/bitnami-docker-postgresql/blob/master/README.md#creating-a-database-on-first-run
 ##
-postgresqlDatabase: kong
+# postgresqlDatabase:
 
 ## PostgreSQL data dir
 ## ref: https://github.com/bitnami/bitnami-docker-postgresql/blob/master/README.md
@@ -561,7 +561,8 @@ readReplicas:
   ## Node labels for PostgreSQL read only  pods assignment
   ## ref: https://kubernetes.io/docs/user-guide/node-selection/
   ##
-  nodeSelector: {}
+  nodeSelector:
+    eks.amazonaws.com/capacityType: SPOT
 
   ## Tolerations for PostgreSQL read only  pods assignment
   ## ref: https://kubernetes.io/docs/concepts/configuration/taint-and-toleration/
@@ -627,11 +628,11 @@ readReplicas:
 ##
 resources:
   requests:
-    memory: 256Mi
-    cpu: 250m
+    memory: 512Mi
+    cpu: 200m
   limits:
-    memory: 256Mi
-    cpu: 250m
+    memory: 2Gi
+    cpu: 1000m
 
 ## Add annotations to all the deployed resources
 ##
