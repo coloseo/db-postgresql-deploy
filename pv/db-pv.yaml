@@ -1,0 +1,16 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+    name: db-vol-06f3062ed2f63179b
+    namespace: db
+    labels:
+      pv: db
+spec:
+    accessModes: 
+        - ReadWriteOnce
+    capacity:
+        storage: 20Gi
+    awsElasticBlockStore:
+        fsType: ext4
+        volumeID: vol-06f3062ed2f63179b
+    persistentVolumeReclaimPolicy: Retain

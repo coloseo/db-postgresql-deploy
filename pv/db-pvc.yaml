@@ -1,0 +1,15 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: db-claim-0
+  namespace: db
+spec:
+  storageClassName: ""
+  accessModes:
+    - ReadWriteOnce
+  selector:
+    matchLabels:
+      pv: db
+  resources:
+      requests:
+          storage: 20Gi
