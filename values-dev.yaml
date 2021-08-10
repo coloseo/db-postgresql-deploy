@@ -406,7 +406,7 @@ persistence:
   storageClass: "standard"
   accessModes:
     - ReadWriteOnce
-  size: 10Gi
+  size: 1Gi
   annotations: {}
   ## selector can be used to match an existing PersistentVolume
   ## selector:
