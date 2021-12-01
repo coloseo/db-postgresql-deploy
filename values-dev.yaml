@@ -403,7 +403,7 @@ persistence:
   ##
   subPath: ""
 
-  storageClass: "standard"
+  storageClass: ""
   accessModes:
     - ReadWriteOnce
   size: 1Gi
