@@ -628,11 +628,11 @@ readReplicas:
 ##
 resources:
   requests:
-    memory: 512Mi
-    cpu: 200m
+    memory: 4Gi
+    cpu: 2000m
   limits:
-    memory: 2Gi
-    cpu: 1000m
+    memory: 4Gi
+    cpu: 2000m
 
 ## Add annotations to all the deployed resources
 ##
